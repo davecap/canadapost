@@ -1,0 +1,20 @@
+# Canada Post EST Settings
+
+# Canada Post EST credentials
+CPC_EST_USERNAME = ''
+CPC_EST_PASSWORD = ''
+
+# Canada Post CC Alias and CCV
+CPC_EST_CREDIT_CARD_ALIAS = ''
+CPC_EST_CREDIT_CARD_CVV = ''
+
+# Canada Post waybill generator defaults
+CPC_EST_DEFAULTS = {
+    'username': CPC_EST_USERNAME,
+    'password': CPC_EST_PASSWORD,
+    'shipper_name': 'Your Name',
+    'shipper_phone': '5141234567',
+    'shipper_postal_code': 'ANANAN',
+    'payment_credit_card_alias': CPC_EST_CREDIT_CARD_ALIAS,
+    'payment_credit_card_cvv': CPC_EST_CREDIT_CARD_CVV,
+}
