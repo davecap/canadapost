@@ -272,6 +272,7 @@ class CanadaPostBot():
             self.logged_in = True
 
     def generate_waybill(self, country, skip_login=False, **kwargs):
+        self.login()
         # load the data
         self.data.update(kwargs)
         if country == 'CA':
@@ -301,10 +302,12 @@ class CanadaPostBot():
             return self.run_pipeline(pipeline)
 
     def quote_waybill(self, country, **kwargs):
+        self.login()
         # TODO
         pass
 
     def get_stored_data(self, country):
+        self.login()
         fields = ['clientId', 'isVentureOne', 'contactName', 'shipperPhone',
                     'preferredMethodOfPayment', 'shippingPointPC', 'selectedTemplate']
         stored_data = {}
